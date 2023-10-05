@@ -1,0 +1,25 @@
+<div class="container-fluid p-0">
+    <div class="row m-0">
+        <div class='col-md-12 p-o'>
+            <div class="menu-container">
+                <div class="menu">
+                    {% load mptt_tags %}
+                    <ul>
+                        <li><a href="{% url "home" %}">Главная</a></li>
+                        {% recursetree categories %}
+                        <li>
+                            <a href='{{ node.get_absolute_url }}'>{{ node.name }}</a>
+                            {% if not node.is_leaf_node %}
+                            <ul class="children">
+                                {{ children }}
+                            </ul>
+                            {% endif %}
+                        </li>
+                        {% endrecursetree %}
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
