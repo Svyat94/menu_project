@@ -24,6 +24,7 @@ class Category(MPTTModel):
     class MPTTMeta:
         order_insertion_by = ['name']
 
+
 class Article(models.Model):
     name = models.CharField(max_length=255)
     content = models.TextField()

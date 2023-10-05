@@ -14,5 +14,6 @@ class CustomCategoryAdmin(DraggableMPTTAdmin, MPTTModelAdmin):
         'indented_title',
     )
 
+
 admin.site.register(Category, CustomCategoryAdmin)
 admin.site.register(Article)
