@@ -51,6 +51,11 @@ python manage.py createsuperuser
 ```bash
 python manage.py collectstatic
 ```
+Заупскаем сервер
+```bash
+python manage.py runserver
+```
+---
 Далее переходим в [админку](http://127.0.0.1:8000/admin/)
 
 #### Заполняем базу данных:
